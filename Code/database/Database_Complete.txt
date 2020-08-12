@@ -1,0 +1,45 @@
+CREATE TABLE Holdings(
+   client_id   varchar(20) NOT NULL,
+   ticket_name VARCHAR (20)     NOT NULL,
+   ticker_size bigint(20)   NULL,
+   price float not null,
+   PRIMARY KEY (client_id,ticket_name)
+);
+
+CREATE TABLE Positions(
+   client_id   varchar(20) NOT NULL,
+   ticker_name VARCHAR (20)     NOT NULL,
+   ticker_size bigint(20)   NULL,
+   price float not null,
+   PRIMARY KEY (client_id,ticket_name)
+);
+
+create table curusr(
+    id int not null auto_increment,
+    usr varchar(10),
+    primary key(id)
+);
+
+insert into Holdings Values("6","INFY",1, 670.526);
+insert into Holdings Values("6","RIL",1, 1280.22);
+insert into Holdings Values("6","TCS",5, 2028.39);
+insert into Holdings Values("6","ZEE",1, 465.199);
+insert into Holdings Values("7","HDFC",12, 1288.39);
+
+
+
+insert into Positions Values("3","RIL",1, 1300);
+insert into Positions Values("6","RIL",1, 0);
+insert into Positions Values("6","TCS",1, 666.487);
+insert into Positions Values("6","NIFY",1, 1293.31);
+insert into Positions Values("7","HDFC",1, 1281.24);
+
+
+
+
+insert into curusr Values(1,"que");
+insert into curusr Values(2,"quu");
+insert into curusr (usr) Values("quw");
+insert into curusr (usr) Values("mann");
+
+

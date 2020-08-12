@@ -1,0 +1,17 @@
+Backend Login : approx 700-720 millisecond
+Frontend login : approx 2.5-3 second (when you open it for the first time it takes only 1.5 second but after opening more tabs, average becomes 2.5-3 second)
+Login Username textbox : less than 0.9 second
+Login password textbox : less than 0.9 second
+Login submit button : less than 0.9 second
+
+Backend dashboard millisecond : approx 25 millisecond (Because login phase loads the component of dashboard)
+Frontend dashboard millisecond : 1.5-2.5 second
+Backend order tab millisecond : approx 25 millisecond (Because login phase loads the component of dashboard)
+Frontend order tab millisecond : 1.5-2.5 second
+
+after filling the details
+Backend order placed  millisecond : 7 millisecond (Because login phase loads the component of dashboard)
+Frontend order placed millisecond : 50-60 millisecond
+
+
+

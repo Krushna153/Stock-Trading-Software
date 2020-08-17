@@ -1,0 +1,30 @@
+drop event stock_price_change;
+drop event limit_order_clear;
+drop event market_order_clear;
+#event for change stock-price
+set global event_scheduler = on;
+
+create event stock_price_change
+on schedule every 2 minute
+starts '2020-05-14 18:00:00'
+ends '2020-05-15 12:00:00' 
+do
+update Stock_detail set price = price + ( rand()*(-10) +5);
+
+#event for clearing limit_order on every 6 minute
+
+create event limit_order_clear
+on schedule every 1 minute
+starts '2020-05-14 18:00:00'
+ends '2020-05-15 12:00:00' 
+do
+call clearing_limit_order();
+
+#event for clearing  market_order on every 2 minute
+
+create event market_order_clear
+on schedule every 1 minute
+starts '2020-05-14 18:00:00'
+ends '2020-05-15 12:00:00' 
+do
+call clearing_market_order();
